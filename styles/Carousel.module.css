@@ -1,0 +1,7 @@
+.slide {
+  height: 400px;
+  background-color: coral;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -4,7 +4,10 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 
-export default function HomePage({ story }) {
+import Carousel from "../components/Carousel.jsx";
+import Form from "../components/Form.jsx";
+
+export default function Services({ story }) {
   story = useStoryblokState(story);
 
   return (
@@ -25,18 +28,21 @@ export default function HomePage({ story }) {
         </div>
       </div>
       <div className="container mx-auto px-4">
+        <div>Welcome to Next.js, brother!</div>
         <h1 className="text-2xl my-4">{story ? story.name : ""}</h1>
+        <hr className="my-7" />
         <StoryblokComponent blok={story.content} />
         <hr className="my-7" />
-        {/* <Form /> */}
+        <Form />
       </div>
+      <Carousel />
     </div>
   );
 }
 
 export async function getStaticProps() {
   // home is the default slug for the homepage in Storyblok
-  let slug = "home";
+  let slug = "services";
 
   // load the draft version
   let sbParams = {

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 6969",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -18,10 +18,13 @@
     "@tailwindcss/typography": "^0.5.8",
     "axios": "^0.27.2",
     "next": "^12.3.3",
+    "nodemailer": "^6.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.39.4",
     "storyblok-js-client": "^5.0.7",
-    "storyblok-rich-text-react-renderer": "^2.6.1"
+    "storyblok-rich-text-react-renderer": "^2.6.1",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

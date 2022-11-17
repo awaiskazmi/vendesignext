@@ -7,10 +7,25 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Airbnb Cereal", "sans-serif"],
-      serif: ["Merriweather", "serif"],
+      sans: ["Averta", "sans-serif"],
+      serif: ["Dia", "serif"],
     },
-    extend: {},
+    container: {
+      center: true,
+      screens: {
+        // sm: '600px',
+        // md: '728px',
+        // lg: '984px',
+        // xl: '1240px',
+        // '2xl': '1496px',
+        lg: "1160px",
+      },
+    },
+    extend: {
+      width: {
+        half: "50vw",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
