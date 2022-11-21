@@ -7,8 +7,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["Averta", "sans-serif"],
-      serif: ["Dia", "serif"],
+      sans: ["Inter", "sans-serif"],
+      serif: ["Lora", "serif"],
     },
     container: {
       center: true,
@@ -24,6 +24,15 @@ module.exports = {
     extend: {
       width: {
         half: "50vw",
+      },
+      colors: {
+        light: "#f6f7fa",
+      },
+      spacing: {
+        13: "3.25rem",
+        14: "4rem",
+        15: "7.68rem",
+        16: "10.25rem",
       },
     },
   },

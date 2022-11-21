@@ -4,53 +4,56 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 
-export default function HomePage({ story }) {
-  story = useStoryblokState(story);
+// import Form from "../components/Form";
+import Head from "next/head";
+import Link from "next/link";
+
+// sections
+import LandingHeroCarousel from "../components/sections/LandingHeroCarousel";
+import HeadlineStats from "../components/sections/HeadlineStats";
+
+export default function HomePage({ story = null }) {
+  // story = useStoryblokState(story);
 
   return (
-    <div>
-      <div className="container">
-        <div className="flex items-center px-4 py-20">
-          <div className="grow shrink-0 w-1/2 px-3">
-            <h1>Dairah classroom coming to Karachi soon!</h1>
-          </div>
-          {/*style={{ width: `calc( (var(--container-width)/2) + (100vw - var(--container-width))/2 )` }}*/}
-          <div className="shrink-0 w-half pl-12 flex items-center">
-            <img
-              src="http://picsum.photos/id/1/720/480"
-              alt="Image"
-              className="rounded w-full"
-            />
-          </div>
+    <>
+      <Head>
+        <title>{story?.name} | VentureDive</title>
+      </Head>
+      <LandingHeroCarousel />
+      <HeadlineStats />
+      <section className="bg-white py-15">
+        <div className="container px-5 md:px-0">
+          <h2>Another cool section here</h2>
         </div>
-      </div>
-      <div className="container mx-auto px-4">
-        <h1 className="text-2xl my-4">{story ? story.name : ""}</h1>
-        <StoryblokComponent blok={story.content} />
-        <hr className="my-7" />
-        {/* <Form /> */}
-      </div>
-    </div>
+        <div className="">
+          {/* <h1 className="text-2xl my-4">{story ? story.name : ""}</h1> */}
+          {/* <StoryblokComponent blok={story.content} /> */}
+          {/* <Form /> */}
+        </div>
+      </section>
+    </>
   );
 }
 
-export async function getStaticProps() {
-  // home is the default slug for the homepage in Storyblok
-  let slug = "home";
+// export async function getStaticProps() {
+//   // home is the default slug for the homepage in Storyblok
+//   let slug = "home";
 
-  // load the draft version
-  let sbParams = {
-    version: "draft", // or 'published'
-  };
+//   // load the draft version
+//   let sbParams = {
+//     version: "draft", // or 'published'
+//     resolve_relations: ["Slider.articles"],
+//   };
 
-  const storyblokApi = getStoryblokApi();
-  let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
+//   const storyblokApi = getStoryblokApi();
+//   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
 
-  return {
-    props: {
-      story: data ? data.story : false,
-      key: data ? data.story.id : false,
-    },
-    revalidate: 3600, // revalidate every hour
-  };
-}
+//   return {
+//     props: {
+//       story: data ? data.story : false,
+//       key: data ? data.story.id : false,
+//     },
+//     revalidate: 3600, // revalidate every hour
+//   };
+// }

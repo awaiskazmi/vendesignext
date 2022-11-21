@@ -15,6 +15,8 @@ export default function Carousel({ slides = [] }) {
   const theme = useContext(ThemeContext);
   const slideOffset = theme.slideOffset;
 
+  console.log(slideOffset);
+
   const onSlideChange = () => {};
 
   slides = slides.map((slide, index) => {
@@ -32,8 +34,8 @@ export default function Carousel({ slides = [] }) {
         enabled: true,
         momentumRatio: 0.2,
       }}
-      spaceBetween={50}
-      slidesPerView={3}
+      spaceBetween={24}
+      slidesPerView={2}
       slidesOffsetBefore={slideOffset}
       slidesOffsetAfter={slideOffset}
       onSlideChange={onSlideChange}

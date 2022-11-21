@@ -1,0 +1,60 @@
+.carouselImagesWrapper {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.5rem;
+  aspect-ratio: 1.175 / 1;
+  width: 100%;
+  grid-template-areas:
+    "ts b b c c c c"
+    "a b b c c c c"
+    "d d d c c c c"
+    "d d d e e f bs2"
+    "d d d e e bs1 bs2";
+}
+
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+.e {
+  grid-area: e;
+}
+
+.f {
+  grid-area: f;
+}
+
+@media (width <= 768px) {
+  .carouselImagesWrapper {
+    aspect-ratio: 1.25/1;
+    gap: 1rem;
+    grid-template-areas:
+      "ts b b c c c c"
+      "a b b c c c c"
+      "d d d c c c c"
+      "d d d e e f f"
+      "d d d e e bs1 bs2";
+  }
+  .a {
+    margin-top: -1rem;
+  }
+  .d {
+    margin-left: 1rem;
+  }
+  .f {
+    margin-bottom: -2rem;
+  }
+}

@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,12 +21,25 @@ p + a {
   margin-top: 1rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif;
+}
+
 h1 {
-  font-size: 3.052rem;
+  font-size: 64px;
+  line-height: 77px;
 }
+
 h2 {
-  font-size: 2.441rem;
+  font-size: 40px;
+  line-height: 56px;
 }
+
 h3 {
   font-size: 1.953rem;
 }
@@ -34,4 +51,26 @@ h5 {
 }
 small {
   font-size: 0.8rem;
+}
+
+code {
+  display: inline-block;
+  background: #eee;
+  padding: 0.25rem;
+}
+
+button {
+  @apply inline-flex bg-red-500 hover:bg-red-600 text-white py-2 px-5 rounded-3xl;
+}
+
+@media (width <= 768px) {
+  h1 {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
