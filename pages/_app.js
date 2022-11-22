@@ -21,7 +21,7 @@ const components = {
   carousel: Carousel,
   richText: RichText,
   Page: Page,
-  "Landing Page": LandingPage,
+  "LandingPage": LandingPage,
   script: Script,
   Slide: Slide,
   Slider: Slider,

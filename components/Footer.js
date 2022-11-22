@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-light">
-      <div className="container px-5 md:px-=0 pt-15 pb-14">
+      <div className="container px-5 md:px-0 pt-15 pb-14">
         <div className="md:flex justify-between gap-15">
           <div className="md:w-3/6">
             <h2>Let's craft brilliance together!</h2>
@@ -11,7 +11,7 @@ export default function Footer() {
               Schedule a 15-minute call with our design expert to discuss your
               project idea
             </p>
-            <div className="flex gap-5 mt-9">
+            <div className="flex gap-3 mt-9">
               <button>Talk to us</button>
               <button>Estimate Project Cost</button>
             </div>
@@ -53,8 +53,8 @@ export default function Footer() {
         </div>
       </div>
       <hr />
-      <div className="py-7 md:py-14 text-center">
-        &copy; 2022 VentureDive. ALl Rights Reserved.
+      <div className="py-7 md:py-14 text-center text-xs md:text-base">
+        &copy; 2022 VentureDive. All Rights Reserved.
       </div>
     </footer>
   );

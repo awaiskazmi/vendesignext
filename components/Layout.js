@@ -42,6 +42,9 @@ export default function Layout({ children }) {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
         />
+          <script charSet="utf-8"
+                  type="text/javascript"
+                  src="//js.hsforms.net/forms/embed/v2.js"></script>
       </Head>
       <Header />
       <div className="container" ref={containerRef}></div>

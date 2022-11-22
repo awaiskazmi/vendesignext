@@ -59,8 +59,29 @@ code {
   padding: 0.25rem;
 }
 
+.hs-button,
 button {
-  @apply inline-flex bg-red-500 hover:bg-red-600 text-white py-2 px-5 rounded-3xl;
+  @apply cursor-pointer inline-flex bg-red-500 hover:bg-red-600 text-white py-2 px-5 rounded-3xl;
+}
+
+.hs-button {
+  @apply mt-5 px-10 text-sm
+}
+
+.hs-form-field {
+  @apply mb-2
+}
+
+.hs-form-field label {
+  @apply text-xs;
+}
+
+.hs-input {
+  @apply block w-full py-2 px-3 border rounded mb-1;
+}
+
+.hs-error-msg {
+  @apply block text-red-500 mb-5 text-xs;
 }
 
 @media (width <= 768px) {

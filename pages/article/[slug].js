@@ -3,7 +3,7 @@ import { getStoryblokApi } from "@storyblok/react";
 export default function Article({ story: { content } }) {
   return (
     <section className="container">
-      <div className="px-5 py-12 article">
+      <div className="px-5 md:px-0 py-12 article">
         <h1>{content.Title}</h1>
         <div>{content.Excerpt}</div>
       </div>
